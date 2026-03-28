@@ -17,19 +17,27 @@ A Claude Code skill for generating professional medical and scientific PowerPoin
 
 ## How to Use
 
-### 1. Install dependencies
+### Option A: Claude Web/App (simplest)
 
-**Python:**
+1. Download the latest `medical-pptx.zip` from this repository
+2. In Claude, go to **Customize > Skills > + > Upload Skill** and drag and drop the zip file
+3. Start a conversation and ask Claude to create a presentation using the medical pptx skill based on an uploaded PDF or document
+
+### Option B: Claude Code CLI
+
+**1. Install dependencies**
+
+Python:
 ```bash
 pip install pymupdf python-pptx "markitdown[pptx]"
 ```
 
-**Node.js:**
+Node.js:
 ```bash
 npm install -g pptxgenjs react-icons react react-dom sharp
 ```
 
-**LibreOffice** (for visual QA):
+LibreOffice (for visual QA):
 ```bash
 # macOS
 brew install --cask libreoffice
@@ -37,15 +45,13 @@ brew install --cask libreoffice
 sudo apt install libreoffice
 ```
 
-### 2. Install the skill
+**2. Install the skill**
 
 ```bash
 claude mcp add-skill /path/to/medical-pptx
 ```
 
-Or upload `SKILL.md` and the `references/` folder to a Claude Project's knowledge base.
-
-### 3. Generate a presentation
+**3. Generate a presentation**
 
 Ask Claude to create a presentation. The skill will:
 
